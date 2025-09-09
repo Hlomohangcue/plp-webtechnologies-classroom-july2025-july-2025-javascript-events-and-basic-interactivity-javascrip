@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page - Week 6 Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Interactive Web Development Showcase</h1>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <!-- Part 2: Interactive Elements Section -->
+        <section class="interactive-section">
+            <h2>🎮 Interactive Features</h2>
+            
+            <!-- Counter Game -->
+            <div class="feature-box">
+                <h3>Counter Challenge</h3>
+                <div class="counter-display">
+                    <span id="counter-value">0</span>
+                </div>
+                <div class="counter-controls">
+                    <button id="counter-decrease">-</button>
+                    <button id="counter-increase">+</button>
+                    <button id="counter-reset">Reset</button>
+                </div>
+            </div>
+
+            <!-- Collapsible FAQ -->
+            <div class="feature-box">
+                <h3>📋 Frequently Asked Questions</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What is JavaScript? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>JavaScript is a programming language that enables interactive web pages and is an essential part of web development alongside HTML and CSS.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How do event listeners work? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>Event listeners wait for specific events (like clicks or key presses) to occur and then execute a function in response to that event.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is DOM manipulation? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer">
+                            <p>DOM manipulation refers to changing the structure, style, or content of a web page dynamically using JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabbed Interface -->
+            <div class="feature-box">
+                <h3>📑 Tabbed Content</h3>
+                <div class="tabs-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tab1">HTML</button>
+                        <button class="tab-btn" data-tab="tab2">CSS</button>
+                        <button class="tab-btn" data-tab="tab3">JavaScript</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-panel active">
+                            <h4>HTML - HyperText Markup Language</h4>
+                            <p>HTML is the standard markup language for creating web pages. It describes the structure of a web page using elements and tags.</p>
+                        </div>
+                        <div id="tab2" class="tab-panel">
+                            <h4>CSS - Cascading Style Sheets</h4>
+                            <p>CSS is used to describe the presentation of a document written in HTML. It controls the layout, colors, fonts, and overall visual appearance.</p>
+                        </div>
+                        <div id="tab3" class="tab-panel">
+                            <h4>JavaScript - The Programming Language of the Web</h4>
+                            <p>JavaScript enables dynamic behavior on web pages, handling user interactions, manipulating the DOM, and creating responsive interfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation Section -->
+        <section class="form-section">
+            <h2>📋✅ User Registration Form</h2>
+            <form id="registration-form" class="registration-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="fullName-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                    <div class="password-requirements">
+                        <small>Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number.</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="confirmPassword-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="13" max="120">
+                    <span class="error-message" id="age-error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the Terms and Conditions
+                    </label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Account</button>
+            </form>
+
+            <div id="success-message" class="success-message" style="display: none;">
+                <h3>🎉 Registration Successful!</h3>
+                <p>Thank you for registering. Your account has been created successfully.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Interactive Web Development Assignment - Week 6</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
